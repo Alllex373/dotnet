@@ -1,0 +1,20 @@
+﻿@model Sweet_Shop.Models.Product
+@{
+    /**/
+
+    ViewBag.Title = "Add";
+}
+
+<h2>Новый продукт</h2>
+@using (Html.BeginForm("Add", "Product", FormMethod.Post))
+{
+    <table>
+        <tr>
+            <td>Name:@Html.TextBoxFor(x => x.groupId) @Html.TextBoxFor(y => y.Name) @Html.TextBoxFor(z => z.Price) @Html.ValidationMessageFor(x => x.groupId)@Html.ValidationMessageFor(x => x.Name) @Html.ValidationMessageFor(x => x.Price)</td>
+        </tr>
+    </table>
+
+    <input type="submit" value="Сохранить" />
+
+
+}
